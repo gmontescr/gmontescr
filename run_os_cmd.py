@@ -1,3 +1,9 @@
+import subprocess
+from shutil import which
+
+def os_command_check(cmd: str) -> bool:
+    return True if which(cmd) else False
+
 def run_os_cmd(cmd: str, *args: str) -> list:
     cmdOut: list
     output: list = []
